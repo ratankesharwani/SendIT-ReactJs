@@ -1,0 +1,19 @@
+{
+  "name": "sendit-reactjs",
+  "version": "1.0.0",
+  "description": "SendIT is a courier service that helps users deliver parcels to different destinations.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koitoror/SendIT-ReactJs.git"
+  },
+  "author": "Daniel Kamar <kamarster@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koitoror/SendIT-ReactJs/issues"
+  },
+  "homepage": "https://github.com/koitoror/SendIT-ReactJs#readme",
+  "scripts": {
+    "test": "react-scripts test"
+  }
+}
