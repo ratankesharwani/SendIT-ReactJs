@@ -25,7 +25,7 @@ Run `npm install` or `yarn install` in the terminal to install the dependencies
 
 Run `npm start` or `yarn start` to run the development server
 
-Run tests `npm test`
+Run tests `npm test` to run tests
 
 # PT LINK
 You can view the pivotal stories [here](https://www.pivotaltracker.com/n/projects/2216466)
