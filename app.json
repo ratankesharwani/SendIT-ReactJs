@@ -13,7 +13,7 @@
         "quantity": 1
         }
     },
-    "name": "ah-centauri-frontend",
+    "name": "SendIT-ReactJs",
     "scripts": {
     },
     "stack": "heroku-18"

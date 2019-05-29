@@ -78,7 +78,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             title: "SendIT :: Parcel Delivery Service",
-            template: "UI/index.html"
+            template: "client/index.html"
         }),
         new CleanWebpackPlugin(["UI/static/dist"])
     ]
