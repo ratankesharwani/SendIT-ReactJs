@@ -1,85 +1,87 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin")
-const CleanWebpackPlugin = require("clean-webpack-plugin")
-const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+// import { ExtractTextPlugin, CleanWebpackPlugin, HtmlWebpackPlugin } from 'react-scripts';
+
 
 module.exports = {
 
-    mode: "development",
+  mode: 'development',
 
-    // define entry points
-    entry: {
-        app: "./UI/static/js/main.js",
-        signup: "./UI/static/js/signup.js",
-        signin: "./UI/static/js/signin.js",
-        dashboard: "./UI/static/js/dashboard.js",
-        profile: "./UI/static/js/profile.js",
-        addParcel: "./UI/static/js/addParcel.js",
-        contents: "./UI/static/js/contents.js",
-        editOrder: "./UI/static/js/editOrder.js",
-        editOrderStatus: "./UI/static/js/editOrderStatus.js",
-        editOrderPresentLocation: "./UI/static/js/editOrderPresentLocation.js",
-        editOrderDestination: "./UI/static/js/editOrderDestination.js",
-        editOrderToCancel: "./UI/static/js/editOrderToCancel.js",
+  // define entry points
+  entry: {
+    app: './UI/static/js/main.js',
+    signup: './UI/static/js/signup.js',
+    signin: './UI/static/js/signin.js',
+    dashboard: './UI/static/js/dashboard.js',
+    profile: './UI/static/js/profile.js',
+    addParcel: './UI/static/js/addParcel.js',
+    contents: './UI/static/js/contents.js',
+    editOrder: './UI/static/js/editOrder.js',
+    editOrderStatus: './UI/static/js/editOrderStatus.js',
+    editOrderPresentLocation: './UI/static/js/editOrderPresentLocation.js',
+    editOrderDestination: './UI/static/js/editOrderDestination.js',
+    editOrderToCancel: './UI/static/js/editOrderToCancel.js',
 
 
-    },
-    // define output point
-    output:{
-        path: path.resolve(__dirname, "UI/static/dist"),
-        filename: "[name].min.js",
-        // publicPath: "/dist"
-    },
-    module: {
-        rules:[{
-            test:/\.js$/,
-            exclude:/node_modules/,
-            use:[{
-                loader:"babel-loader",
-                options:{
-                    presets:["env"]
-                }
-            }]
+  },
+  // define output point
+  output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: '[name].min.js',
+    // publicPath: "/dist"
+  },
+  module: {
+    rules: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: [{
+        loader: 'babel-loader',
+        options: {
+          presets: ['env'],
         },
-        {
-            test:/\.css$/,
-            use:ExtractTextPlugin.extract({
-                fallback:"style-loader",
-                use:["css-loader"],
-                publicPath: "/dist"
-            })
-        },
-        {
-            test:/\.html$/,
-            use:[ "html-loader"]
-        },
-        {
-            test:/\.(jpg|png)$/,
-            use:[
-                {
-                    loader: "file-loader",
-                    options:{
-                        name:"[name].[ext]",
-                        outputPath:"images/",
-                        publicPath:"images/"
-                    }
-                }
-                
-            ]
-        }
-    ]
+      }],
     },
-    
-    plugins: [
-        new ExtractTextPlugin({
-            filename: "app.css",
-            // disabled: false,
-            allChunks:true
-        }),
-        new HtmlWebpackPlugin({
-            title: "SendIT :: Parcel Delivery Service",
-            template: "client/index.html"
-        }),
-        new CleanWebpackPlugin(["UI/static/dist"])
-    ]
-}
+    {
+      test: /\.css$/,
+      use: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: ['css-loader'],
+        publicPath: '/build',
+      }),
+    },
+    {
+      test: /\.html$/,
+      use: [ 'html-loader'],
+    },
+    {
+      test: /\.(jpg|png)$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'images/',
+            publicPath: 'images/',
+          },
+        },
+      ],
+    },
+    ],
+  },
+
+  plugins: [
+    new ExtractTextPlugin({
+      filename: 'app.css',
+      // disabled: false,
+      allChunks: true,
+    }),
+    new HtmlWebpackPlugin({
+      title: 'SendIT :: Parcel Delivery Service',
+      template: 'client/index.html',
+    }),
+    new CleanWebpackPlugin(['UI/static/dist']),
+  ],
+};
