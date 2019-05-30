@@ -1,5 +1,5 @@
-import {AUTH_ERROR, AUTH_SIGNOUT, AUTH_SUCCESS, LOADING_PROGRESS,} from './types';
-import {api} from '../services/Api';
+import { AUTH_ERROR, AUTH_SIGNOUT, AUTH_SUCCESS, LOADING_PROGRESS } from './types';
+import { api } from '../services/Api';
 import getResponseErrors from '../utils/errorMessage';
 
 export const loadingMessage = (type = LOADING_PROGRESS) => ({
