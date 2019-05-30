@@ -29,7 +29,7 @@ module.exports = {
   },
   // define output point
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'UI/static/dist'),
     filename: '[name].min.js',
     // publicPath: "/dist"
   },
@@ -49,7 +49,7 @@ module.exports = {
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         use: ['css-loader'],
-        publicPath: '/build',
+        publicPath: 'UI/static/css',
       }),
     },
     {

@@ -17,6 +17,14 @@ class Header extends Component {
     this.setState({ activeItem: name });
   }
 
+  handleSignOut = (e) => {
+    this.props.signoutAction();
+  };
+
+  handleSignIn = (e) => {
+    this.props.loginAction();
+  }; 
+
   render() {
     const { activeItem } = this.state;
     return (
