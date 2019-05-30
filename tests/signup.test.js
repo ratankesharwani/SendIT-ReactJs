@@ -2,7 +2,7 @@
 // signUp = require('./UI/static/js/sign-up')
 // signUp = require('../UI/static/dist/signup.min.js')
 
-describe ('signs up user to send-it-ke-v2.herokuapp.com correctly', () => {
+describe ('signs up user to send-it-ke.herokuapp.com correctly', () => {
     // fake data submission
     document.body.innerHTML += `
     <form class="modal-content" id="signUp">
@@ -33,7 +33,7 @@ describe ('signs up user to send-it-ke-v2.herokuapp.com correctly', () => {
     NavSpyMock = jest.spyOn(window.location, "assign");
     NavSpyMock.mockImplementation(() => {});
 
-it('signs up user to send-it-ke-v2.herokuapp.com correctly', async () => {
+it('signs up user to send-it-ke.herokuapp.com correctly', async () => {
     
     // load the window
     require('../UI/static/dist/signup.min')
@@ -48,7 +48,7 @@ it('signs up user to send-it-ke-v2.herokuapp.com correctly', async () => {
     document.getElementById('DoSubmission').click();
     expect(Mock).toHaveBeenCalledTimes(1);
     const Fetch = Mock.mock.calls[0];
-    expect(Fetch[0]).toBe('https://send-it-ke-v2.herokuapp.com/api/v2/auth/signup');
+    expect(Fetch[0]).toBe('https://send-it-ke.herokuapp.com/api/v2/auth/signup');
     expect(Fetch[1]).toEqual({
       method: "POST",
       mode: "cors",
@@ -88,7 +88,7 @@ it('Prevents duplicate registration', async () => {
     document.getElementById('DoSubmission').click();
     expect(Mock).toHaveBeenCalledTimes(1);
     const Fetch = Mock.mock.calls[0];
-    expect(Fetch[0]).toBe('https://send-it-ke-v2.herokuapp.com/api/v2/auth/signup');
+    expect(Fetch[0]).toBe('https://send-it-ke.herokuapp.com/api/v2/auth/signup');
     expect(Fetch[1]).toEqual({
       method: "POST",
       mode: "cors",
@@ -129,7 +129,7 @@ it('User signs up with incorrect email', async () => {
     document.getElementById('DoSubmission').click();
     expect(Mock).toHaveBeenCalledTimes(1);
     const Fetch = Mock.mock.calls[0];
-    expect(Fetch[0]).toBe('https://send-it-ke-v2.herokuapp.com/api/v2/auth/signup');
+    expect(Fetch[0]).toBe('https://send-it-ke.herokuapp.com/api/v2/auth/signup');
     expect(Fetch[1]).toEqual({
       method: "POST",
       mode: "cors",
@@ -168,7 +168,7 @@ it('Notify user for any reason they are not able to sign-up like invalid email',
     document.getElementById('DoSubmission').click();
     expect(Mock).toHaveBeenCalledTimes(1);
     const Fetch = Mock.mock.calls[0];
-    expect(Fetch[0]).toBe('https://send-it-ke-v2.herokuapp.com/api/v2/auth/signup');
+    expect(Fetch[0]).toBe('https://send-it-ke.herokuapp.com/api/v2/auth/signup');
     expect(Fetch[1]).toEqual({
       method: "POST",
       mode: "cors",
@@ -208,7 +208,7 @@ it('User signs with incorrect username', async () => {
     document.getElementById('DoSubmission').click();
     expect(Mock).toHaveBeenCalledTimes(1);
     const Fetch = Mock.mock.calls[0];
-    expect(Fetch[0]).toBe('https://send-it-ke-v2.herokuapp.com/api/v2/auth/signup');
+    expect(Fetch[0]).toBe('https://send-it-ke.herokuapp.com/api/v2/auth/signup');
     expect(Fetch[1]).toEqual({
       method: "POST",
       mode: "cors",

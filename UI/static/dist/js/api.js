@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 
-const uri = 'https://send-it-ke-v2.herokuapp.com/api/v2'
+const uri = 'https://send-it-ke.herokuapp.com/api/v2';
 // const uri = 'http://127.0.0.1:5000/api/v2'
 
 export const api = {
@@ -10,12 +10,12 @@ export const api = {
             body: JSON.stringify(data),
             mode: 'cors',
             headers: {
-                "x-access-token": localStorage.getItem("token"),
-                "content-type": "application/json",
+                'x-access-token': localStorage.getItem('token'),
+                'content-type': 'application/json',
                 'Access-Control-Allow-Origin': '<origin> | *',
-                'Access-Control-Allow-Credentials': 'true'
-            }
-        })
+                'Access-Control-Allow-Credentials': 'true',
+            },
+        });
     },
 
     update(endpoint, data = null) {
@@ -24,12 +24,12 @@ export const api = {
             body: JSON.stringify(data),
             mode: 'cors',
             headers: {
-                "x-access-token": localStorage.getItem("token"),
-                "content-type": "application/json",
+                'x-access-token': localStorage.getItem('token'),
+                'content-type': 'application/json',
                 'Access-Control-Allow-Origin': '<origin> | *',
-                'Access-Control-Allow-Credentials': 'true'
-            }
-        })
+                'Access-Control-Allow-Credentials': 'true',
+            },
+        });
     },
 
     get(endpoint) {
@@ -37,12 +37,12 @@ export const api = {
             method: 'GET',
             mode: 'cors',
             headers: {
-                "x-access-token": localStorage.getItem("token"),
-                "content-type": "application/json",
+                'x-access-token': localStorage.getItem('token'),
+                'content-type': 'application/json',
                 'Access-Control-Allow-Origin': '<origin> | *',
-                'Access-Control-Allow-Credentials': 'true'
-            }
-        })
+                'Access-Control-Allow-Credentials': 'true',
+            },
+        });
     },
 
     delete(endpoint) {
@@ -50,11 +50,11 @@ export const api = {
             method: 'DELETE',
             mode: 'cors',
             headers: {
-                "x-access-token": localStorage.getItem("token"),
-                "content-type": "application/json",
+                'x-access-token': localStorage.getItem('token'),
+                'content-type': 'application/json',
                 'Access-Control-Allow-Origin': '<origin> | *',
-                'Access-Control-Allow-Credentials': 'true'
-            }
-        })
-    }
-}
+                'Access-Control-Allow-Credentials': 'true',
+            },
+        });
+  },
+};

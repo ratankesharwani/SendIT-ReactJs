@@ -5,7 +5,7 @@
 // import { signIn } from '../UI/static/dist/signin.min'
 // import { signIn } from '../UI/static/js/signin'
 
-describe ('signs in user to send-it-ke-v2.herokuapp.com/api/v2 correctly', () => {
+describe ('signs in user to send-it-ke.herokuapp.com/api/v2 correctly', () => {
   // fake data submission
   document.body.innerHTML += `
   <form class="modal-content animate" id="signIn">
@@ -35,7 +35,7 @@ describe ('signs in user to send-it-ke-v2.herokuapp.com/api/v2 correctly', () =>
   NavSpyMock = jest.spyOn(window.location, "assign");
   NavSpyMock.mockImplementation(() => {});
 
-it('signs in user to send-it-ke-v2.herokuapp.com/api/v2 correctly', async () => {
+it('signs in user to send-it-ke.herokuapp.com/api/v2 correctly', async () => {
   
   // load the window
   require('../UI/static/dist/signin.min');
@@ -50,7 +50,7 @@ it('signs in user to send-it-ke-v2.herokuapp.com/api/v2 correctly', async () => 
   document.getElementById('DoSubmission').click();
   expect(Mock).toHaveBeenCalledTimes(1);
   const Fetch = Mock.mock.calls[0];
-  expect(Fetch[0]).toBe('https://send-it-ke-v2.herokuapp.com/api/v2/auth/login');
+  expect(Fetch[0]).toBe('https://send-it-ke.herokuapp.com/api/v2/auth/login');
   expect(Fetch[1]).toEqual({
     method: "POST",
     mode: "cors",
@@ -88,7 +88,7 @@ it('User signs with correct login details', async () => {
   document.getElementById('DoSubmission').click();
   expect(Mock).toHaveBeenCalledTimes(1);
   const Fetch = Mock.mock.calls[0];
-  expect(Fetch[0]).toBe('https://send-it-ke-v2.herokuapp.com/api/v2/auth/login');
+  expect(Fetch[0]).toBe('https://send-it-ke.herokuapp.com/api/v2/auth/login');
   expect(Fetch[1]).toEqual({
     method: "POST",
     mode: "cors",
@@ -123,7 +123,7 @@ it('User signs with incorrect login details', async () => {
     document.getElementById('DoSubmission').click();
     expect(Mock).toHaveBeenCalledTimes(1);
     const Fetch = Mock.mock.calls[0];
-    expect(Fetch[0]).toBe('https://send-it-ke-v2.herokuapp.com/api/v2/auth/login');
+    expect(Fetch[0]).toBe('https://send-it-ke.herokuapp.com/api/v2/auth/login');
     expect(Fetch[1]).toEqual({
       method: "POST",
       mode: "cors",
@@ -162,7 +162,7 @@ it('checks for very short password during sign-in', async () => {
     document.getElementById('DoSubmission').click();
     expect(Mock).toHaveBeenCalledTimes(1);
     const Fetch = Mock.mock.calls[0];
-    expect(Fetch[0]).toBe('https://send-it-ke-v2.herokuapp.com/api/v2/auth/login');
+    expect(Fetch[0]).toBe('https://send-it-ke.herokuapp.com/api/v2/auth/login');
     expect(Fetch[1]).toEqual({
       method: "POST",
       mode: "cors",
@@ -199,7 +199,7 @@ it('Checks for that username and password were provided during sign-in', async (
     document.getElementById('DoSubmission').click();
     expect(Mock).toHaveBeenCalledTimes(1);
     const Fetch = Mock.mock.calls[0];
-    expect(Fetch[0]).toBe('https://send-it-ke-v2.herokuapp.com/api/v2/auth/login');
+    expect(Fetch[0]).toBe('https://send-it-ke.herokuapp.com/api/v2/auth/login');
     expect(Fetch[1]).toEqual({
       method: "POST",
       mode: "cors",

@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 
-const uri = 'https://send-it-ke-v2.herokuapp.com/api/v2'
+const uri = 'https://send-it-ke.herokuapp.com/api/v2'
 // const uri = 'http://127.0.0.1:5000/api/v2'
 
 export const api = {
