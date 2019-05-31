@@ -27,6 +27,13 @@ Run `npm start` or `yarn start` to run the development server
 
 Run tests `npm test` to run tests
 
+## User's Data
+**Default Admin Login Details**(SendIt)
+
+Username - adm
+Password - 123456
+
+
 # PT LINK
 You can view the pivotal stories [here](https://www.pivotaltracker.com/n/projects/2216466)
 
