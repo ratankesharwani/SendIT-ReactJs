@@ -38,3 +38,8 @@ Password - 123456
 You can view the pivotal stories [here](https://www.pivotaltracker.com/n/projects/2216466)
 
 
+# UI link for Heroku
+
+```
+You can view the app on Heroku [here](https://send-it-ke-frontend.herokuapp.com)
+```
