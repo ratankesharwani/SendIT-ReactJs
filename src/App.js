@@ -11,12 +11,12 @@ import setAuthToken from './utils/setAuthToken';
 
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
-import routes from './routes/index'
+import routes from './routes/index';
 
 // eslint-disable-next-line valid-typeof,no-underscore-dangle
 const composeEnhancers = typeof window === 'objects' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-  // eslint-disable-next-line no-underscore-dangle
-  ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}) : compose;
+  ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}) // eslint-disable-next-line no-underscore-dangle
+  : compose;
 
 const token = localStorage.getItem('AUTH_TOKEN');
 
@@ -33,24 +33,15 @@ if (token) {
   setAuthToken(token);
 }
 
-
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
       <Container className="bg-gray">
-        <Header/>
+        <Header />
         <Switch>
-
-          {
-            routes.map( (route)=>{
-              return <Route
-              exact path={route.path}
-              component={route.component}/>
-            })
-          }
-
+          {routes.map((route) => <Route exact path={route.path} component={route.component} />)}
         </Switch>
-        <Footer/>
+        <Footer />
       </Container>
     </BrowserRouter>
   </Provider>
