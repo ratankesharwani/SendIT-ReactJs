@@ -1,6 +1,6 @@
 import HomePage from '../views/HomePage/Homepage';
-import Login from '../views/Login/Login';
-import RegisterPage from '../views/RegisterPage/RegisterPage';
+// import Login from '../views/Login/Login';
+// import RegisterPage from '../views/RegisterPage/RegisterPage';
 
 
 
@@ -13,12 +13,12 @@ const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: Login,
+    // component: Login,
   },
   {
     path: '/Register',
     name: 'Register',
-    component: RegisterPage,
+    // component: RegisterPage,
   },
 ];
 
