@@ -1,6 +1,9 @@
 {
-  "name": "SendIT-ReactJs",
-  "version": "0.1.0",
+  "name": "SendIT-React",
+  "version": "1.0.0",
+   "jest": {
+     "verbose": true
+   },
   "private": false,
   "dependencies": {
     "axios": "^0.21.1",

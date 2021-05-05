@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { applyMiddleware, compose, createStore } from 'redux';
 import reduxThunk from 'redux-thunk';
 
-import { Container } from 'semantic-ui-react';
+// import { Container } from 'semantic-ui-react';
 import reducers from './reducers';
 import setAuthToken from './utils/setAuthToken';
 
@@ -36,13 +36,13 @@ if (token) {
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
-      <Container className="bg-gray">
-        <Header />
-        <Switch>
-          {routes.map((route) => <Route exact path={route.path} component={route.component} />)}
-        </Switch>
-        <Footer />
-      </Container>
+
+      <Header />
+      <Switch>
+        {routes.map((route) => <Route exact path={route.path} component={route.component} />)}
+      </Switch>
+      <Footer />
+
     </BrowserRouter>
   </Provider>
 );

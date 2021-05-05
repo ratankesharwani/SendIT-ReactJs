@@ -1,3 +1,8 @@
+*, ::before, ::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .style_footer {
     background-color: #F8F8F8;
     border-top: 1px solid #E7E7E7;
@@ -31,7 +36,10 @@ body {
   text-align: center;
   background-image: url('../src/images/delivery_man.png');
   background-repeat: no-repeat, repeat;
-
+  display: flex;
+  // align-items: left;
+  justify-content: flex-start;
+  width: 80vw;
 }
 
 * {
@@ -84,7 +92,7 @@ body {
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .header a {
     float: none;
     display: block;
@@ -93,16 +101,28 @@ body {
   .header-right {
     float: none;
   }
+  .left-align-container {
+    display: flex;
+    // flex-direction: row;
+    justify-content: center;
+    // align-items: left !important;
+    min-width: 100vw;
+  }
+  .container-centered {
+    min-width: 100vw;
+
+  }
 }
 
 h1 {
   display: block;
-  font-size: 4em;
+  font-size: 4em !important;
   margin-block-start: 0.27em;
   margin-block-end: 0.27em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  font-weight: bold;
+  font-weight: bold !important;
+  color: #016936 !important;
 
 }
 
@@ -123,6 +143,10 @@ h2 {
   text-transform: capitalize;
 }
 
+.emphasis {
+  color: darkgreen !important;
+
+}
 /* alerts */
 
 .alert {
@@ -302,4 +326,24 @@ body {
 
 .page-login {
   margin-top: 25px;
+}
+
+.container-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh !important;
+  z-index: 100;
+  flex-direction: column;
+  // min-width: 100vw;
+
+}
+
+.left-align-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: left !important;
+  // min-width: 80vw;
+
 }
