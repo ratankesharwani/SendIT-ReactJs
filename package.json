@@ -39,7 +39,7 @@
     "eject": "react-scripts eject",
     "build": "react-scripts build",
     "coverage": "yarn test -u --env=jsdom --coverage --forceExit --coveragePathIgnorePatterns=src/index.js --coveragePathIgnorePatterns=src/store/index.js --coveragePathIgnorePatterns=src/serviceWorker.js",
-    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "eslintConfig": {
     "extends": "react-app"
