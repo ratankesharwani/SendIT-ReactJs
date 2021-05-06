@@ -1,22 +1,6 @@
 {
   "name": "SendIT-React",
   "version": "1.0.0",
-  "jest": {
-    "rootDir": "src",
-    "transform": {
-      "^.+\\.[t|j]sx?$": "babel-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$",
-    "moduleFileExtensions": [
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ],
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|svg|css|less|scss)$": "<rootDir>/__jest__/fileMock.js"
-    }
-  },
   "private": false,
   "dependencies": {
     "axios": "^0.21.1",
@@ -54,7 +38,7 @@
     "test": "./node_modules/.bin/jest",
     "eject": "react-scripts eject",
     "build": "react-scripts build",
-    "coverage": "react-scripts test -u --env=jsdom --coverage --forceExit --coveragePathIgnorePatterns=src/index.js --coveragePathIgnorePatterns=src/store/index.js --coveragePathIgnorePatterns=src/serviceWorker.js",
+    "coverage": "yarn test -u --env=jsdom --coverage --forceExit --coveragePathIgnorePatterns=src/index.js --coveragePathIgnorePatterns=src/store/index.js --coveragePathIgnorePatterns=src/serviceWorker.js",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
   "eslintConfig": {
