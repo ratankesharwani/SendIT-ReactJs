@@ -1,14 +1,27 @@
 {
   "name": "SendIT-React",
   "version": "1.0.0",
-   "jest": {
-     "verbose": true
-   },
+  "jest": {
+    "rootDir": "src",
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$",
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|svg|css|less|scss)$": "<rootDir>/__jest__/fileMock.js"
+    }
+  },
   "private": false,
   "dependencies": {
     "axios": "^0.21.1",
     "clean-webpack-plugin": "^3.0.0",
-    "dotenv": "^8.2.0",
+    "dotenv": "^9.0.0",
     "eslint-plugin-import": "^2.22.1",
     "express": "^4.17.1",
     "extract-text-webpack-plugin": "^3.0.2",
@@ -38,7 +51,7 @@
   "scripts": {
     "dev": "webpack-dev-server",
     "start": "react-scripts start",
-    "test": "react-scripts test",
+    "test": "./node_modules/.bin/jest",
     "eject": "react-scripts eject",
     "build": "react-scripts build",
     "coverage": "react-scripts test -u --env=jsdom --coverage --forceExit --coveragePathIgnorePatterns=src/index.js --coveragePathIgnorePatterns=src/store/index.js --coveragePathIgnorePatterns=src/serviceWorker.js",
@@ -61,6 +74,11 @@
   },
   "devDependencies": {
     "axios-mock-adapter": "^1.19.0",
+    "@babel/preset-env": "^7.14.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
     "coveralls": "^3.1.0",
     "enzyme": "^3.11.0",
     "eslint": "^7.25.0",

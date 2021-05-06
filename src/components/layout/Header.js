@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Image, Menu } from 'semantic-ui-react';
+import { Button, Menu } from 'semantic-ui-react';
 // import PropTypes from 'prop-types';
 
-import logo from '../../images/logo.png';
+// import logo from '../../images/logo.png';
 
-function Header() {
+const Header = () => {
   const [state, setState] = useState({
     activeItem: 'home',
   });
@@ -37,7 +37,7 @@ function Header() {
         active={activeItem === 'home'}
         onClick={handleItemClick}
       >
-        <Image size="mini" bordered centered circular src={logo} />
+        {/* <Image size="mini" bordered centered circular src={logo} /> */}
       </Menu.Item>
       {/* <Menu.Item
         as={Link}
@@ -67,7 +67,7 @@ function Header() {
       </Menu.Menu>
     </Menu>
   );
-}
+};
 
 Header.defaultProps = {
   //   authenticated: false,
